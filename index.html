@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - project6</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&amp;family=Passion+One:wght@400;700;900&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<navbar class="navbar navbar-expand-sm fixed-top at_top">
+  <div class="container-fluid"><a class="navbar-brand ms-3" href="#header"><img src="https://raw.githubusercontent.com/chan2159991/travelpotato/455a8bf75afda9db16268610b1729ac59a228b33/img/navbar_brand.svg" alt=""/></a>
+    <button class="navbar-toggler me-2" onclick="clicked(1)" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">關於ABOUT </a></li>
+        <li class="nav-item"><a class="nav-link" href="#attractions">景點ATTRACTIONS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#creator">創作者CREATOR </a></li>
+      </ul>
+    </div>
+  </div>
+</navbar>
+<header id="header"><img class="logo" src="https://raw.githubusercontent.com/chan2159991/travelpotato/6fde9fd67c51e8ea1e3b47b916e22e17866ced90/img/header_logo.svg" alt=""/><img class="margin" src="https://raw.githubusercontent.com/chan2159991/travelpotato/47e290ed5c0935360f6711aa34768d0aea134e8a/img/about_top_margin.svg" alt=""/>
+  <h5>EXPLORE <br> &#11206</h5>
+</header>
+<section id="about">
+  <div class="container">
+    <div class="col-sm-6 text">
+      <h3>"Don’t be such a couch potato.<br>Let’s hang out!"</h3>
+      <p>「Travel Potato 旅遊馬鈴薯」提供台灣旅遊景點和旅遊創作者的資訊，希望大家能找到喜歡的地方度過完美假期，不再當與沙發和電視為伍的沙發馬鈴薯。</p>
+    </div>
+  </div>
+  <div class="block_container">
+    <div class="floatpic">
+      <div class="block block1"><img src="https://raw.githubusercontent.com/chan2159991/travelpotato/5d046fbf8f36c480dbd06da1094f2a08ebc9272c/img/about_pic1.svg" alt=""/></div>
+      <div class="block block2"><img src="https://raw.githubusercontent.com/chan2159991/travelpotato/ae18b6eab134b709ef5456107731500dff62940b/img/about_pic2.svg" alt=""/></div>
+    </div>
+    <div class="floatpic">
+      <div class="block block3"><img src="https://raw.githubusercontent.com/chan2159991/travelpotato/ae18b6eab134b709ef5456107731500dff62940b/img/about_pic3.svg" alt=""/></div>
+      <div class="block block4"><img src="https://raw.githubusercontent.com/chan2159991/travelpotato/ae18b6eab134b709ef5456107731500dff62940b/img/about_pic4.svg" alt=""/></div>
+    </div>
+    <div class="floatpic">
+      <div class="block block5"><img src="https://raw.githubusercontent.com/chan2159991/travelpotato/ae18b6eab134b709ef5456107731500dff62940b/img/about_pic5.svg" alt=""/></div>
+      <div class="block block6"></div>
+      <div class="block block7"><img src="https://raw.githubusercontent.com/chan2159991/travelpotato/ae18b6eab134b709ef5456107731500dff62940b/img/about_pic7.svg" alt=""/></div>
+    </div>
+  </div>
+  <div class="container" id="slideshow">
+    <div class="mySlides"><img src="https://github.com/chan2159991/travelpotato/blob/main/img/slideshow1.png?raw=true" alt=""/></div>
+    <div class="mySlides"><img src="https://github.com/chan2159991/travelpotato/blob/main/img/slideshow2.png?raw=true" alt=""/></div>
+    <div class="mySlides"><img src="https://github.com/chan2159991/travelpotato/blob/main/img/slideshow3.png?raw=true" alt=""/></div>
+    <div class="mySlides"><img src="https://github.com/chan2159991/travelpotato/blob/main/img/slideshow4.png?raw=true" alt=""/></div>
+    <div class="mySlides"><img src="https://github.com/chan2159991/travelpotato/blob/main/img/slideshow5.png?raw=true" alt=""/></div><a class="prev" onclick="plus(-1)">&#10094</a><a class="next" onclick="plus(1)">&#10095</a>
+    <div class="dots"><span class="dot" onclick="currentSlide(0)"></span><span class="dot" onclick="currentSlide(1)"></span><span class="dot" onclick="currentSlide(2)"></span><span class="dot" onclick="currentSlide(3)"></span><span class="dot" onclick="currentSlide(4)"></span></div>
+  </div>
+</section>
+<div id="app">
+  <section id="attractions"><img class="margin" src="https://raw.githubusercontent.com/chan2159991/travelpotato/f752787354781de0ade27b73a9932a5492623f9b/img/attr_margin.svg" alt=""/>
+    <div class="title">
+      <h1>Attractions</h1>
+      <h4>景點</h4>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="block" v-for="(attr, id) in attrdatas.slice(0,7)" v-bind:class="'block'+id" v-bind:style="'background-image:url('+attr.Picture1+')'" v-on:click="showinfo(id)"> </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="hoverimg"><img src="https://raw.githubusercontent.com/chan2159991/travelpotato/09241cb0f53eb9501116535245f9f9193e9a714e/img/attr_hoverimg.svg" alt=""/></div>
+          <div class="block" v-for="(attr2, id) in attrdatas.slice(7,10)" v-bind:class="'block'+(id+7)" v-bind:style="'background-image:url('+attr2.Picture1+')'" v-on:click="showinfo(id+7)"> </div>
+        </div>
+        <div class="moreinfos_bg" onClick="closeinfo()"></div>
+        <div class="moreinfos" v-bind:class="'moreinfos'+id" v-for="(attr,id) in attrdatas">
+          <h1>{{attrdatas[id].Name}}</h1><img v-bind:src="attrdatas[id].Picture1" alt=""/>
+          <p>介紹：{{attrdatas[id].Description}}</p>
+          <p>位置：{{attrdatas[id].Region+attrdatas[id].Town}}</p>
+          <button class="del_btn" onClick="closeinfo()">X</button>
+        </div>
+      </div>
+    </div>
+    <div class="btn_group">
+      <button class="tfy" v-on:click="pluspage(-1)">&#10094</button>
+      <div class="pagebtn">
+        <button v-for="id in parseInt(pagedata.length/10)" v-on:click="switchpage(id)" v-bind:class="(id==currentIndex)?'nowpage':''">{{id}}</button>
+      </div>
+      <button class="tfy" v-on:click="pluspage(1)">&#10095</button>
+    </div>
+  </section>
+  <section id="creator">
+    <div class="title">
+      <h1>Creator</h1>
+      <h4>旅遊</h4>
+      <h4 class="text2">創作者</h4>
+    </div>
+    <div class="creators">
+      <div class="team" v-for="(creator,id) in creatordatas"><a v-bind:href="creatordatas[id].channel" target="_blank"> <img v-bind:src="creatordatas[id].imgurl" alt=""/></a>
+        <div class="name"> 
+          <h3>{{creatordatas[id].name}}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="movepotato"><img class="potato" src="https://raw.githubusercontent.com/chan2159991/travelpotato/65da90522193a437db3b98eb30677666b865fc1a/img/creator_move.svg" alt=""/><img class="up" src="https://raw.githubusercontent.com/chan2159991/travelpotato/65da90522193a437db3b98eb30677666b865fc1a/img/creator_pick.svg" alt=""/></div>
+  </section>
+</div>
+<footer id="footer"><img src="https://raw.githubusercontent.com/chan2159991/travelpotato/8eb44c0438d2bdd366dbf1f0889ef574410c2ca6/img/footer_logo.svg" alt=""/></footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js'></script>
+<script src='https://unpkg.com/vue@next'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js'></script>
+<script src='https://unpkg.com/axios/dist/axios.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
