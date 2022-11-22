@@ -1,0 +1,704 @@
+* {
+  font-family: "Passion One", "Noto Sans TC";
+  position: relative;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  min-width: 378px;
+}
+
+navbar.navbar {
+  z-index: 5;
+  background-color: #F1EDE2;
+  padding: 0;
+  transition: 0.5s;
+}
+navbar.navbar .container-fluid {
+  padding: 0;
+}
+navbar.navbar .navbar-brand {
+  margin: 10px 0px;
+}
+navbar.navbar .navbar-brand img {
+  width: 150px;
+}
+navbar.navbar button.navbar-toggler {
+  padding: 2px 5px;
+  transition: 0.5s;
+  background-color: transparent;
+  border-radius: 5px;
+}
+navbar.navbar button.navbar-toggler:hover {
+  background-color: rgba(170, 170, 170, 0.4);
+}
+navbar.navbar button.navbar-toggler:focus {
+  box-shadow: none;
+}
+navbar.navbar button.navbar-toggler.click {
+  background-color: rgba(170, 170, 170, 0.4);
+}
+navbar.navbar ul.navbar-nav {
+  padding-right: 5px;
+}
+navbar.navbar .nav-link {
+  color: #aaa;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 1px #aaa;
+}
+navbar.navbar .navbar-collapse.collapse#navbarNavDropdown.show .navbar-nav, navbar.navbar .collapsing .navbar-nav {
+  border-top: solid 1px #aaa;
+  padding: 0;
+}
+navbar.navbar .navbar-collapse.collapse#navbarNavDropdown.show .nav-item, navbar.navbar .collapsing .nav-item {
+  border-bottom: solid 1px #aaa;
+  text-align: center;
+}
+navbar.navbar .navbar-collapse.collapse#navbarNavDropdown.show .nav-link, navbar.navbar .collapsing .nav-link {
+  color: #aaa;
+}
+navbar.navbar.at_top {
+  background-color: transparent;
+}
+navbar.navbar.at_top .nav-link {
+  color: #F1EDE2;
+}
+
+header#header {
+  height: 100vh;
+  background-image: url(https://raw.githubusercontent.com/chan2159991/travelpotato/09a254413569a5d6a6d7dfa6626b5afdf705d15c/img/header_bg.svg);
+  background-size: cover;
+  background-position: center center;
+}
+header#header img.logo {
+  width: 30%;
+  min-width: 170px;
+  max-width: 320px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate_scale 2s ease-in;
+}
+@keyframes rotate_scale {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3) rotate(0deg);
+  }
+  90% {
+    transform: translate(-50%, -50%) scale(1.3) rotate(1080deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(1080deg);
+  }
+}
+header#header img.margin {
+  width: 100%;
+  position: absolute;
+  bottom: -2px;
+  animation: upin 2s;
+}
+@keyframes upin {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+header#header h5 {
+  text-align: center;
+  color: #F1EDE2;
+  line-height: 20px;
+  top: 80%;
+  transition: 0.5s;
+  opacity: 0;
+}
+header#header h5.at_top {
+  opacity: 1;
+}
+
+section#about {
+  padding: 100px 0px 0px;
+  background-color: #FCC03D;
+}
+section#about .text_area .slogan {
+  padding: 0px 10px;
+  font-size: 55px;
+  text-align: center;
+}
+section#about .text_area p {
+  font-size: 20px;
+  width: 500px;
+  padding: 15px;
+  margin: 10px auto 60px;
+  line-height: 30px;
+}
+section#about .block_container {
+  position: absolute;
+  top: -30px;
+  transition: 0.5s;
+  animation: float 3s infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+section#about .block_container.left {
+  left: 50px;
+}
+section#about .block_container.right {
+  right: 60px;
+}
+section#about .block_container.at_top {
+  opacity: 0;
+}
+section#about .block {
+  border-radius: 20%;
+  overflow: hidden;
+  box-shadow: 0px 1px 3px rgba(20, 20, 18, 0.3);
+  margin: 5px;
+  transform: rotate(40deg);
+  opacity: 0.7;
+}
+section#about .block1 {
+  width: 210px;
+  height: 210px;
+  background-color: #77BDC5;
+}
+section#about .block1 img {
+  left: 15%;
+  top: 15%;
+}
+section#about .block2 {
+  width: 120px;
+  height: 120px;
+  background-color: #F1EDE2;
+  left: 70%;
+}
+section#about .block2 img {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section#about .block3 {
+  width: 160px;
+  height: 160px;
+  background-color: #FF6161;
+  left: 15%;
+}
+section#about .block3 img {
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+section#about .block4 {
+  width: 120px;
+  height: 120px;
+  background-color: #F1EDE2;
+  left: 55%;
+}
+section#about .block5 {
+  width: 210px;
+  height: 210px;
+  background-color: #141412;
+}
+section#about .block5 img {
+  left: 15%;
+  top: 15%;
+}
+section#about .block6 {
+  width: 105px;
+  height: 105px;
+  background-color: #FF6161;
+  left: -10%;
+  top: 20px;
+  display: inline-block;
+}
+section#about .block7 {
+  width: 105px;
+  height: 105px;
+  background-color: #77BDC5;
+  display: inline-block;
+  left: 10%;
+}
+section#about .block7 img {
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slideshow_container:hover .prev, .slideshow_container:hover .next {
+  opacity: 1;
+}
+.slideshow_container img {
+  width: 100%;
+}
+.slideshow_container .mySlides {
+  display: none;
+  animation: fade 2s;
+}
+@keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.slideshow_container .prev, .slideshow_container .next {
+  opacity: 0;
+  color: #65655a;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0px 0px 1px #F1EDE2;
+  text-decoration: none;
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;
+  transition: 0.3s;
+}
+.slideshow_container .prev:hover, .slideshow_container .next:hover {
+  background-color: rgba(241, 237, 226, 0.3);
+}
+.slideshow_container .next {
+  right: 0%;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 100%;
+  transform: translate(-50%, -100%);
+  pointer-events: none;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  border: solid 1px rgba(20, 20, 18, 0.3);
+  border-radius: 100%;
+  background-color: rgba(241, 237, 226, 0.6);
+  margin: 0px 5px;
+  display: inline-block;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: 0.3s;
+}
+
+.active, .dot:hover {
+  background-color: rgba(20, 20, 18, 0.3);
+}
+
+section#attractions {
+  padding: 70px 100px 0px;
+  background-color: #77BDC5;
+}
+section#attractions .hoverimg {
+  position: absolute;
+  width: 70%;
+  right: 5%;
+  top: -15%;
+  animation: moving 8s infinite linear;
+}
+@keyframes moving {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+section#attractions .col-sm-6 {
+  padding: 0;
+}
+section#attractions .block {
+  height: 120px;
+  width: calc((100% - 3px*6)/3);
+  margin: 3px;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 0px 1px 3px;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+}
+section#attractions .block:hover {
+  filter: brightness(50%);
+}
+section#attractions .block3, section#attractions .block5, section#attractions .block9 {
+  width: calc(calc((100% - 3px*6)/3)*2 + 3px*2);
+}
+section#attractions .block3, section#attractions .block6, section#attractions .block7, section#attractions .block8, section#attractions .block9 {
+  height: 246px;
+}
+section#attractions .block6 {
+  position: absolute;
+  top: 252px;
+}
+section#attractions .block7 {
+  width: calc(100% - 3px*2 );
+}
+
+.title {
+  color: #F1EDE2;
+  padding: 0px;
+  z-index: 1;
+}
+.title h1 {
+  display: inline-block;
+  font-size: 50px;
+  vertical-align: middle;
+}
+.title h1:after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 70px;
+  background-color: #FF6161;
+  margin: 0px 20px;
+  vertical-align: middle;
+}
+.title h4 {
+  display: inline-block;
+  vertical-align: middle;
+  writing-mode: vertical-lr;
+  letter-spacing: 10px;
+  margin: 0;
+}
+
+.btn_group {
+  z-index: 2;
+  margin-top: 20px;
+  text-align: center;
+}
+.btn_group .pagebtn {
+  display: inline-block;
+}
+.btn_group button {
+  width: 30px;
+  height: 30px;
+  background-color: #F1EDE2;
+  border: none;
+  border-radius: 100%;
+  margin: 5px;
+  color: #141412;
+  font-size: 16px;
+  padding: 0px 7px;
+}
+.btn_group button:hover, .btn_group button.nowpage {
+  background-color: #FF6161;
+  color: #F1EDE2;
+}
+
+.moreinfos::-webkit-scrollbar {
+  width: 0px;
+}
+
+.moreinfos {
+  max-width: 360px;
+  display: none;
+  width: 70vw;
+  max-height: 90vh;
+  background-color: #F1EDE2;
+  text-align: center;
+  overflow-y: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 15;
+  border: solid 20px #FCC03D;
+  border-radius: 30px;
+  box-shadow: 0px 0px 2px #141412;
+  padding: 20px;
+}
+.moreinfos img {
+  margin: 10px auto;
+  width: 80%;
+}
+.moreinfos h1 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0px 0px;
+}
+.moreinfos p {
+  font-size: 15px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.moreinfos .del_btn {
+  width: 30px;
+  height: 30px;
+  background-color: #FF6161;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 20px;
+  padding: 1px 5px;
+  border: none;
+  border-radius: 100%;
+  color: #F1EDE2;
+}
+
+.moreinfos_bg {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+}
+
+section#creator {
+  background-image: url(https://raw.githubusercontent.com/chan2159991/travelpotato/64845be7472cd32e5216bfcccca78bd30cd3ffc4/img/creator_bg.svg);
+  background-size: cover;
+  background-position: center 0;
+  background-color: #FF6161;
+  padding: 110px 0px 150px;
+  overflow: hidden;
+}
+section#creator img.margin {
+  position: absolute;
+  width: 102%;
+  left: 0%;
+  top: -25px;
+}
+section#creator .title {
+  text-align: right;
+  padding-right: 50px;
+}
+section#creator .title h1:after {
+  background-color: #FCC03D;
+}
+section#creator .title h4 {
+  top: -20px;
+}
+section#creator .title h4.text2 {
+  top: 20px;
+}
+section#creator .creators {
+  text-align: center;
+  padding: 20px 30px 10px 0px;
+}
+
+.team {
+  width: 23vw;
+  height: 23vw;
+  background-color: #FCC03D;
+  border: solid 3px #141412;
+  border-radius: 20px;
+  box-shadow: 30px 0px #9e6d02;
+  display: inline-block;
+  margin: 10px;
+  transition: 0.3s;
+}
+.team:hover {
+  transform: rotate(5deg);
+}
+.team a {
+  cursor: default;
+}
+.team img {
+  width: 80%;
+  margin: 10%;
+  cursor: pointer;
+}
+.team .name {
+  width: 90%;
+  height: 30px;
+  background-color: #77BDC5;
+  border: solid 3px #141412;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 88%;
+}
+.team .name:before, .team .name:after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #F1EDE2;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.team .name:before {
+  left: 5px;
+}
+.team .name:after {
+  right: 5px;
+}
+.team .name h3 {
+  width: 100%;
+  font-size: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.movepotato {
+  position: absolute;
+  transition: transform 0.3s;
+}
+.movepotato img.potato {
+  width: 200px;
+}
+.movepotato img.up {
+  width: 30px;
+  position: absolute;
+  left: 130px;
+  top: 30px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+footer {
+  padding: 150px;
+  background-image: url(https://raw.githubusercontent.com/chan2159991/travelpotato/09a254413569a5d6a6d7dfa6626b5afdf705d15c/img/header_bg.svg);
+  background-size: cover;
+  background-position: center center;
+}
+footer img {
+  width: 20%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1024px) {
+  section#about .block_container.left {
+    left: 20px;
+  }
+
+  section#creator .team {
+    width: 25vw;
+    height: 25vw;
+    background-color: #FCC03D;
+  }
+
+  section#attractions {
+    padding: 70px 50px 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section#about .block_container {
+    top: 0px;
+  }
+  section#about .block_container.right {
+    right: 40px;
+  }
+  section#about .block_container .block {
+    width: 96px;
+    height: 96px;
+  }
+  section#about .block_container .block1, section#about .block_container .block5 {
+    width: 160px;
+    height: 160px;
+  }
+  section#about .block_container .block3 {
+    width: 120px;
+    height: 120px;
+  }
+
+  section#attractions {
+    padding: 70px 30px 0px;
+  }
+
+  section#creator .team h3 {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 576px) {
+  section#about .text_area .slogan {
+    font-size: 45px;
+    padding: 0px 30px;
+  }
+  section#about .text_area p {
+    background-color: rgba(241, 237, 226, 0.4);
+    border-radius: 10px;
+    font-weight: 530;
+    font-size: 18px;
+    width: 80%;
+    margin: 10px auto 30px;
+    line-height: 25px;
+  }
+  section#about .block_container.right {
+    top: 200px;
+    right: 40px;
+  }
+  section#about .block_container .block {
+    width: 84px;
+    height: 84px;
+  }
+  section#about .block_container .block1, section#about .block_container .block5 {
+    width: 144px;
+    height: 144px;
+  }
+  section#about .block_container .block3 {
+    width: 108px;
+    height: 108px;
+  }
+
+  section#attractions {
+    padding: 70px 20px 0px;
+  }
+  section#attractions .hoverimg {
+    display: none;
+  }
+  section#attractions .pagebtn {
+    width: 210px;
+  }
+  section#attractions button.tfy {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  section#attractions .moreinfos {
+    width: 80vw;
+  }
+
+  section#creator img.margin {
+    top: -15px;
+  }
+  section#creator .team {
+    width: 60vw;
+    height: 60vw;
+  }
+  section#creator .team h3 {
+    font-size: 15px;
+  }
+
+  footer {
+    padding: 100px;
+  }
+}
